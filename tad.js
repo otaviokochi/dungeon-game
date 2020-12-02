@@ -90,11 +90,12 @@ const createAdventurersArray = numberOfAdventurers => {
         adventurous = prompt(`Qual a quantidade de ${aux} que deseja? `);
         numberOfAdventurers -= adventurous;
         if (i === 0)
-            adventurousInstance = new Adventurous(aux, 'dano fisico', 6, 2) 
+            adventurousInstance = new Adventurous(aux, 'dano fisico', 6, 2);
         else if (i === 1)
-            adventurousInstance = new Adventurous(aux, 'dano magico', 4, 4)
+            adventurousInstance = new Adventurous(aux, 'dano magico', 4, 4);
         else
-            adventurousInstance = new Adventurous(aux, 'dano veneno', 5, 3) 
+            adventurousInstance = new Adventurous(aux, 'dano veneno', 5, 3);
+        console.log({...adventurousInstance})
         if(numberOfAdventurers >= 0)
             adventurers.push({...adventurousInstance, quantity: adventurous});
         else {
@@ -108,7 +109,7 @@ const createAdventurersArray = numberOfAdventurers => {
             aux = 'druidas';
     }
     for(i = i; i < 2; i ++) {
-        adventurers.push(0);
+        adventurers.push({quantity: 0});
     }
     if(numberOfAdventurers !== 0) {
         console.log("Você não atingiu a quantidade certa de aventureiros!");
