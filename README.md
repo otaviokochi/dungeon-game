@@ -91,3 +91,20 @@ Observações sobre a implementação:
 • O jogo deve ser implementado para que seja de fácil extensão. 
 ◦ Ou seja, para adicionar outros tipos de dano, monstros (com diferentes porcentagens de redução, por exemplo, um monstro 65% de redução de dano físico) e classes não deve ser necessária a adição de muitas linhas nas abstrações existentes (de preferência não se deve alterar as abstrações existentes). 
 • Caso a equipe deseje outros tipos de dano, monstros ou classes, ela poderá implementar, porém as classes que causam dano deverão ser restritas a um único tipo de dano e o monstros também só poderão possuir resistência a tipo de dano.
+
+## Como rodar a aplicação
+
+- Instale o node: *^v12.16.1*
+  - Link do tutorial de instalação do `node`: https://nodejs.org/en/download/package-manager/
+
+- Instale um dos seguintes gerenciadores de pacotes: `Yarn` ou `npm`
+  - Link do tutorial de instalação do `yarn`: https://classic.yarnpkg.com/pt-BR/docs/install/
+
+- Entre na raiz do diretório  (`/`)
+
+- Instale as dependências utilizando `yarn` ou `npm` utilizando um dos seguintes comandos: `yarn` ou `npm install`
+
+- Execute o jogo utilizando o seguinte comando: </br>
+  `yarn start` ou `npm start` </br>
+
+- Bom jogo!
