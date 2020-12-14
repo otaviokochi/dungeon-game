@@ -16,8 +16,8 @@ function Monster(name, life, defenseT, defenseP) {
 
     this.setMonsterLife = (life, attackType) => {
         if (monsterLife >= 0) {
-            if(attackType === this.getDefenseType())
-                monsterLife -= life * this.getDefensePercent()/100;
+            if (attackType === this.getDefenseType())
+                monsterLife -= life * this.getDefensePercent() / 100;
             else
                 monsterLife -= life
         }
@@ -95,23 +95,22 @@ const createAdventurersArray = numberOfAdventurers => {
             adventurousInstance = new Adventurous(aux, 'dano magico', 4, 4);
         else
             adventurousInstance = new Adventurous(aux, 'dano veneno', 5, 3);
-        console.log({...adventurousInstance})
-        if(numberOfAdventurers >= 0)
-            adventurers.push({...adventurousInstance, quantity: adventurous});
+        if (numberOfAdventurers >= 0)
+            adventurers.push({ ...adventurousInstance, quantity: adventurous });
         else {
             console.log("Você excedeu a quantidade máxima de aventureiros!");
             return false;
         }
-        if(numberOfAdventurers === 0) break;
-        if(i === 0) 
+        if (numberOfAdventurers === 0) break;
+        if (i === 0)
             aux = 'magos';
-        else 
+        else
             aux = 'druidas';
     }
-    for(i = i; i < 2; i ++) {
-        adventurers.push({quantity: 0});
+    for (i = i; i < 2; i++) {
+        adventurers.push({ quantity: 0 });
     }
-    if(numberOfAdventurers !== 0) {
+    if (numberOfAdventurers !== 0) {
         console.log("Você não atingiu a quantidade certa de aventureiros!");
         return false;
     }
